@@ -1,5 +1,6 @@
 dependencies:
   typescript-tuple: 1.5.0
+  utility-types: 2.0.0
 devDependencies:
   static-type-assert: 1.2.0
   typescript: 3.0.3
@@ -23,6 +24,12 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-kk80vLW9iGtjMnIv11qyxLqZm20UklzuR2tL0QAnDIygIUIemcZMxlMWudl9OOt76H3ntVzcTiddQ1/pAAJMYg==
+  /utility-types/2.0.0:
+    dev: false
+    engines:
+      node: '>= 4'
+    resolution:
+      integrity: sha512-/ilZGby7cs2OmvJuhRiqczKtjEY5lcdt2oaI/Q+VFepOAgQNgGRwTbRa0mtN1CIb7Kkw5dSsCKXMU29+jLP8jw==
 registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
@@ -30,3 +37,4 @@ specifiers:
   static-type-assert: ^1.2.0
   typescript: ^3.0.3
   typescript-tuple: ^1.5.0
+  utility-types: ^2.0.0
