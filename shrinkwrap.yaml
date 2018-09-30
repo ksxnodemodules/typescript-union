@@ -1,9 +1,9 @@
 dependencies:
-  typescript-tuple: 1.7.2
+  typescript-tuple: 1.7.3
   utility-types: 2.1.0
 devDependencies:
   static-type-assert: 3.0.0
-  typescript: 3.0.3
+  typescript: 3.1.1
 packages:
   /static-type-assert/3.0.0:
     dependencies:
@@ -23,19 +23,19 @@ packages:
     dev: true
     resolution:
       integrity: sha512-zXFars5LUkI3zP492ls0VskH3TtdeHCqu0i7/duGt60i5IGPIpAHE/DWo5FqJ6EjQ15YKXrt+AETjv60Dat34Q==
-  /typescript-tuple/1.7.2:
+  /typescript-tuple/1.7.3:
     dev: false
     engines:
       typescript: ^3.0.0
     resolution:
-      integrity: sha512-+7ou1AuwISGu1OuV2JvQOYtAhT4AEAt0QGGkxwIX59lIUaJyT1ZGiFDvfE0DTwPU4n/svSX10UB3DuI1gwLuJw==
-  /typescript/3.0.3:
+      integrity: sha512-ygCTfD6CX5ul+J0sZhq2MSouMNAeJpRXAFkYPUZomv457KWg15DuS7n+ubv15LtbX27iVo6DkuiX/5yyNdBvVg==
+  /typescript/3.1.1:
     dev: true
     engines:
       node: '>=4.2.0'
     hasBin: true
     resolution:
-      integrity: sha512-kk80vLW9iGtjMnIv11qyxLqZm20UklzuR2tL0QAnDIygIUIemcZMxlMWudl9OOt76H3ntVzcTiddQ1/pAAJMYg==
+      integrity: sha512-Veu0w4dTc/9wlWNf2jeRInNodKlcdLgemvPsrNpfu5Pq39sgfFjvIIgTsvUHCoLBnMhPoUA+tFxsXjU6VexVRQ==
   /utility-types/2.1.0:
     dev: false
     engines:
@@ -47,6 +47,6 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   static-type-assert: ^3.0.0
-  typescript: ^3.0.3
-  typescript-tuple: ^1.7.2
+  typescript: ^3.1.1
+  typescript-tuple: ^1.7.3
   utility-types: ^2.0.0
