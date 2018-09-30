@@ -24,7 +24,7 @@
   "homepage": "https://github.com/ksxnodemodules/typescript-union#readme",
   "dependencies": {
     "utility-types": "^2.0.0",
-    "typescript-tuple": "^1.7.2"
+    "typescript-tuple": "^1.7.3"
   },
   "devDependencies": {
     "typescript": "^3.0.3",
