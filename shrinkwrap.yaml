@@ -1,9 +1,9 @@
 dependencies:
-  typescript-tuple: 2.0.0
-  utility-types: 2.1.0
+  typescript-tuple: 2.1.0
+  utility-types: 3.0.0
 devDependencies:
   static-type-assert: 3.0.1
-  typescript: 3.1.1
+  typescript: 3.2.2
 packages:
   /static-type-assert/3.0.1:
     dependencies:
@@ -16,32 +16,32 @@ packages:
   /typescript-compare/0.0.2:
     dependencies:
       typescript-logic: 0.0.0
-    dev: true
     resolution:
       integrity: sha512-8ja4j7pMHkfLJQO2/8tut7ub+J3Lw2S3061eJLFQcvs3tsmJKp8KG5NtpLn7KcY2w08edF74BSVN7qJS0U6oHA==
   /typescript-logic/0.0.0:
-    dev: true
     resolution:
       integrity: sha512-zXFars5LUkI3zP492ls0VskH3TtdeHCqu0i7/duGt60i5IGPIpAHE/DWo5FqJ6EjQ15YKXrt+AETjv60Dat34Q==
-  /typescript-tuple/2.0.0:
+  /typescript-tuple/2.1.0:
+    dependencies:
+      typescript-compare: 0.0.2
     dev: false
     engines:
       typescript: ^3.0.0
     resolution:
-      integrity: sha512-NbHDXpz0QMUnfTibv0HGtAMXt1t+p+H4RCFjiYVE3HJnstZDDZMZaOyIYDgztUzZcIz/y5W0rtLPTRtMPfU7eA==
-  /typescript/3.1.1:
+      integrity: sha512-yoi2Bsa/OHzGh7PO5zpyFj6g+0dUbR5DbdQLPFkbEulOImQtCliShqzoDpAjcpsPCfibhr2Q92y5NqYzYkaK6Q==
+  /typescript/3.2.2:
     dev: true
     engines:
       node: '>=4.2.0'
     hasBin: true
     resolution:
-      integrity: sha512-Veu0w4dTc/9wlWNf2jeRInNodKlcdLgemvPsrNpfu5Pq39sgfFjvIIgTsvUHCoLBnMhPoUA+tFxsXjU6VexVRQ==
-  /utility-types/2.1.0:
+      integrity: sha512-VCj5UiSyHBjwfYacmDuc/NOk4QQixbE+Wn7MFJuS0nRuPQbof132Pw4u53dm264O8LPc2MVsc7RJNml5szurkg==
+  /utility-types/3.0.0:
     dev: false
     engines:
       node: '>= 4'
     resolution:
-      integrity: sha512-/nP2gqavggo6l38rtQI/CdeV+2fmBGXVvHgj9kV2MAnms3TIi77Mz9BtapPFI0+GZQCqqom0vACQ+VlTTaCovw==
+      integrity: sha512-eAv4GYXof9UbugNjhfybnpjtIq7xLgs1XgDgjE1UTFmojqhd5qK5m7RPSynWxQtuMt3JvVnsXzGR+2Jh1ey3xg==
 registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
@@ -49,4 +49,4 @@ specifiers:
   static-type-assert: ^3.0.0
   typescript: ^3.1.1
   typescript-tuple: ^2.0.0
-  utility-types: ^2.0.0
+  utility-types: ^3.0.0
