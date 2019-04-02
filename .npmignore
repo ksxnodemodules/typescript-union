@@ -24,3 +24,5 @@ shrinkwrap*
 renovate*
 tsconfig*
 /.vscode
+*.ts
+!*.d.ts
