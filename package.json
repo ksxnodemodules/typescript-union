@@ -4,7 +4,7 @@
   "description": "Generics to work with unions in TypeScript",
   "main": "index.js",
   "scripts": {
-    "prepublishOnly": "tsc",
+    "prepublishOnly": "tsc --noEmit",
     "test": "tsc --noEmit"
   },
   "repository": {
