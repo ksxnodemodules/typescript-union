@@ -29,8 +29,5 @@
   "devDependencies": {
     "typescript": "^3.4.1",
     "static-type-assert": "^3.0.1"
-  },
-  "engines": {
-    "typescript": "^3.0.0"
   }
 }
