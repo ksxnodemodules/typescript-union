@@ -19,38 +19,13 @@ export type RangeZero<Max extends number> = utils.RangeZero<Max>
  * Create a union of range from `Min` to `Max`, including `Min`, excluding `Max`
  * @example `Range<3, 7>` → `3 | 4 | 5 | 6`
  */
-export type Range<Min extends number, Max extends number> = utils.Range<Min, Max>
+export type Range<Min extends number, Max extends number> =
+  // @ts-ignore
+  utils.Range<Min, Max>
 
 export namespace utils {
-  export type FromFiniteTuple<Tuple extends any[]> = {
-    empty: never,
-    //@ts-ignore
-    nonEmpty: ((..._: Tuple) => any) extends ((_: infer First, ..._1: infer Rest) => any)
-      ? First | FromFiniteTuple<Rest>
-      : never
-  }[
-    Tuple extends [] ? 'empty' : 'nonEmpty'
-  ]
-
-  export type FromInfiniteTuple<
-    Tuple extends any[],
-    Splitted extends boolean = false,
-    Pair = never,
-  > = {
-    'splitted': Pair extends [infer Finite, infer Infinite] ?
-      Finite extends any[] ?
-      Infinite extends (infer RepeatedElement)[] ?
-        FromFiniteTuple<Finite> | RepeatedElement
-      : never
-      : never
-      : never,
-    'unsplitted': FromInfiniteTuple<Tuple, true, tuple.SplitInfiniteTuple<Tuple>>
-  }[
-    Splitted extends true ? 'splitted' : 'unsplitted'
-  ]
-
   export type FromTuple<Tuple extends any[]> =
-    tuple.IsFinite<Tuple, FromFiniteTuple<Tuple>, FromInfiniteTuple<Tuple>>
+    Tuple extends Iterable<infer X> ? X : never
 
   export type RangeZero<
     Ceiling extends number,
