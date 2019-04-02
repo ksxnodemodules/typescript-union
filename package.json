@@ -23,12 +23,12 @@
   },
   "homepage": "https://github.com/ksxnodemodules/typescript-union#readme",
   "dependencies": {
-    "utility-types": "^2.0.0",
-    "typescript-tuple": "^1.7.3"
+    "utility-types": "^3.4.1",
+    "typescript-tuple": "^2.2.1"
   },
   "devDependencies": {
-    "typescript": "^3.1.1",
-    "static-type-assert": "^3.0.0"
+    "typescript": "^3.4.1",
+    "static-type-assert": "^3.0.1"
   },
   "engines": {
     "typescript": "^3.0.0"
