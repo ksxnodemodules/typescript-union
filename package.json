@@ -1,6 +1,6 @@
 {
   "name": "typescript-union",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Generics to work with unions in TypeScript",
   "main": "index.js",
   "scripts": {
