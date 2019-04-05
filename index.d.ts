@@ -19,9 +19,7 @@ export type RangeZero<Max extends number> = utils.RangeZero<Max>
  * Create a union of range from `Min` to `Max`, including `Min`, excluding `Max`
  * @example `Range<3, 7>` → `3 | 4 | 5 | 6`
  */
-export type Range<Min extends number, Max extends number> =
-  // @ts-ignore
-  utils.Range<Min, Max>
+export type Range<Min extends number, Max extends number> = utils.Range<Min, Max>
 
 export namespace utils {
   export type FromTuple<Tuple extends any[]> =
@@ -39,5 +37,9 @@ export namespace utils {
   ]
 
   export type Range<Floor extends number, Ceiling extends number> =
-    ulib.SetDifference<RangeZero<Ceiling>, RangeZero<Floor>>
+    RangeZero<Ceiling> extends infer A ?
+    RangeZero<Floor> extends infer B ?
+      ulib.SetDifference<A, B>
+    : never
+    : never
 }
