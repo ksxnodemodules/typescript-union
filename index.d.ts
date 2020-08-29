@@ -17,8 +17,7 @@ export type RangeBound = generated.RangeBound
  * @example `FromTuple<'x'[]>` → `'x'`
  * @example `FromTuple<[0, 1, 2, ...'x'[]]` → `0 | 1 | 2 | 'x'`
  */
-export type FromTuple<Tuple extends any[]> =
-  Tuple extends Iterable<infer X> ? X : never
+export type FromTuple<Tuple extends any[]> = Tuple[number]
 
 /**
  * Create a union of range from 0 to `Ceiling`, excluding `Ceiling`
