@@ -2,11 +2,6 @@ import * as ulib from 'utility-types'
 import * as generated from './generated'
 
 /**
- * Largest permitted ceiling value
- */
-export type RangeMaxCeiling = generated.RangeMaxCeiling
-
-/**
  * Permitted bound
  */
 export type RangeBound = generated.RangeBound
