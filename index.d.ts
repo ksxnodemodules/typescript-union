@@ -21,7 +21,7 @@ export type FromTuple<Tuple extends any[]> =
   Tuple extends Iterable<infer X> ? X : never
 
 /**
- * Create a union of range from 0 to `Max`, excluding `Max`
+ * Create a union of range from 0 to `Ceiling`, excluding `Ceiling`
  * @example `RangeZero<5>` → `0 | 1 | 2 | 3 | 4`
  */
 export type RangeZero<Ceiling extends RangeBound> = generated.RangeSet[Ceiling]
