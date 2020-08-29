@@ -27,3 +27,4 @@ tsconfig*
 /.vscode
 *.ts
 !*.d.ts
+/codegen*
