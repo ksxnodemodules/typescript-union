@@ -4,8 +4,10 @@
   "description": "Generics to work with unions in TypeScript",
   "main": "index.js",
   "scripts": {
-    "prepublishOnly": "tsc --noEmit",
-    "test": "tsc --noEmit"
+    "codegen": "node codegen.js",
+    "build": "pnpm run codegen",
+    "prepublishOnly": "pnpm test",
+    "test": "pnpm run build && tsc --noEmit"
   },
   "repository": {
     "type": "git",
@@ -23,8 +25,7 @@
   },
   "homepage": "https://github.com/ksxnodemodules/typescript-union#readme",
   "dependencies": {
-    "utility-types": "^3.4.1",
-    "typescript-tuple": "^4.0.0"
+    "utility-types": "^3.4.1"
   },
   "devDependencies": {
     "typescript": "^4.0.0",
