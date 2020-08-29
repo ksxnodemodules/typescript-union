@@ -17,7 +17,8 @@ export type RangeBound = generated.RangeBound
  * @example `FromTuple<'x'[]>` → `'x'`
  * @example `FromTuple<[0, 1, 2, ...'x'[]]` → `0 | 1 | 2 | 'x'`
  */
-export type FromTuple<Tuple extends any[]> = utils.FromTuple<Tuple>
+export type FromTuple<Tuple extends any[]> =
+  Tuple extends Iterable<infer X> ? X : never
 
 /**
  * Create a union of range from 0 to `Max`, excluding `Max`
@@ -29,12 +30,5 @@ export type RangeZero<Ceiling extends RangeBound> = generated.RangeSet[Ceiling]
  * Create a union of range from `Min` to `Max`, including `Min`, excluding `Max`
  * @example `Range<3, 7>` → `3 | 4 | 5 | 6`
  */
-export type Range<Min extends RangeBound, Max extends RangeBound> = utils.Range<Min, Max>
-
-export namespace utils {
-  export type FromTuple<Tuple extends any[]> =
-    Tuple extends Iterable<infer X> ? X : never
-
-  export type Range<Floor extends RangeBound, Ceiling extends RangeBound> =
-    ulib.SetDifference<RangeZero<Ceiling>, RangeZero<Floor>>
-}
+export type Range<Min extends RangeBound, Max extends RangeBound> =
+  ulib.SetDifference<RangeZero<Max>, RangeZero<Min>>
