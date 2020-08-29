@@ -15,10 +15,10 @@ export type RangeBound = generated.RangeBound
 export type FromTuple<Tuple extends any[]> = Tuple[number]
 
 /**
- * Create a union of range from 0 to `Ceiling`, excluding `Ceiling`
+ * Create a union of range from 0 to `Max`, excluding `Max`
  * @example `RangeZero<5>` → `0 | 1 | 2 | 3 | 4`
  */
-export type RangeZero<Ceiling extends RangeBound> = generated.RangeSet[Ceiling]
+export type RangeZero<Max extends RangeBound> = generated.RangeSet[Max]
 
 /**
  * Create a union of range from `Min` to `Max`, including `Min`, excluding `Max`
