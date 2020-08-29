@@ -37,9 +37,5 @@ export namespace utils {
   ]
 
   export type Range<Floor extends number, Ceiling extends number> =
-    RangeZero<Ceiling> extends infer A ?
-    RangeZero<Floor> extends infer B ?
-      ulib.SetDifference<A, B>
-    : never
-    : never
+    ulib.SetDifference<RangeZero<Ceiling>, RangeZero<Floor>>
 }
